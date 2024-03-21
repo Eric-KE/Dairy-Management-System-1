@@ -1,8 +1,9 @@
 from django.urls import path
 from . import views
+from django.contrib.auth.views import LoginView
 
 urlpatterns = [
-        path('', views.home, name='home'),
+        path('contact/', views.ContactUs, name='home'),
         path('signup/', views.signup, name='signup'),
         path('addcustomer/',views.addcustomer,name='addcustomer'),
         path('allcustomer/',views.allcustomer,name='allcustomer'),
@@ -17,5 +18,6 @@ urlpatterns = [
         path('ledger_save/',views.ledger_save,name='ledger_save'),
         path('ledger_delete/',views.ledger_delete,name='ledger_delete'),
         path('ledger/<int:pk>/', views.ledger, name='ledger'),
+        path('home/', views.home, name='home'),
+        path('', LoginView.as_view(), name='login'),
 ]
-

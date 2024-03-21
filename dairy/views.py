@@ -11,6 +11,11 @@ from django.core.mail import send_mail
 from django.conf import settings
 
 def home(request):
+    return render(request, 'dashboard.html')
+
+
+
+def ContactUs(request):
     title = ''
     confirm_message = None
     form = contactForm(request.POST or None)
