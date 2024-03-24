@@ -14,6 +14,18 @@ def home(request):
     return render(request, 'dashboard.html')
 
 
+from django.shortcuts import render
+
+def add_member(request):
+    return render(request, 'member/Add_Customer.html')
+
+def customer_details(request):
+    return render(request, 'member/customer_detail.html')
+
+def customer_list(request):
+    return render(request, 'member/customer.html')
+
+
 
 def ContactUs(request):
     title = ''

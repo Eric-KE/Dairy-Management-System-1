@@ -3,47 +3,168 @@
 
 {% load static %}
 {% block content %}
+{% load static %}
 
+<div class="container-fluid">
+    <div class="row">
+        <!-- Dashboard and Other Elements on Left Side -->
+        <div class="col-lg-3">
+            <!-- Dashboard -->
+            <div class="sidebar">
+                <nav class="sidebar-nav">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'home' %}"><i class="icon-speedometer"></i> Dashboard</a>
+                        </li>
+                        <!-- Aside Bar Navigation -->
+                        <li class="nav-item">
+                            <a class="nav-link nav-dropdown-toggle" href="#">
+                                <i class="fa fa-users"></i> Member Management</a>
+                            <ul class="nav-dropdown-items">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">
+                                        <i class="fa fa-plus-circle"></i> Member register</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">
+                                        <i class="fa fa-user"></i> Member Details</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">
+                                        <i class="fa fa-list"></i> Member List List</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-dropdown-toggle" href="#">
+                                <i class="fa fa-users"></i> Milk Management</a>
+                            <ul class="nav-dropdown-items">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">
+                                        <i class="fa fa-plus-circle"></i> Milk Collection</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">
+                                        <i class="fa fa-user"></i> Milk collection list</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-dropdown-toggle" href="#">
+                                <i class="fa fa-users"></i> Vendor Management</a>
+                            <ul class="nav-dropdown-items">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">
+                                        <i class="fa fa-plus-circle"></i>Vendor Register</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">
+                                        <i class="fa fa-user"></i> Vendor Details</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">
+                                        <i class="fa fa-list"></i> Vendor List</a>
+                                </li>
+                            </ul>
+                            <li class="nav-item">
+                                <a class="nav-link nav-dropdown-toggle" href="#">
+                                    <i class="fa fa-users"></i> Reports</a>
+                                <ul class="nav-dropdown-items">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="">
+                                            <i class="fa fa-plus-circle"></i> Member List</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="">
+                                            <i class="fa fa-user"></i>Vendor List</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="">
+                                            <i class="fa fa-list"></i> Milk Collected reports</a>
+                                    </li>
+                                </ul>
+                            </li>
+                    </ul>
+                </nav>
+                <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+            </div>
+        </div>
+        <!-- Content in the Middle -->
+        <div class="col-lg-6">
+            <div class="container-fluid">
+                <!-- Display Greeting Message -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="marquee-wrapper">
+                            <marquee behavior="scroll" direction="left" class="marquee">
+                                Welcome To Dairy Cooperative Management
+                            </marquee>
+                        </div>
+                    </div>
+                </div>
+                <!-- Display Statistics -->
+                <div class="row mt-4">
+                    <!-- Display Number of Active and Inactive Members -->
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card bg-primary text-white">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="text-value">
+                                    </div>
+                                    <div>Total Members</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Display Total Milk Collected -->
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card bg-danger text-white">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="text-value"><a href="#" class="btn btn-transparent">{{ total_milk_collected }}</a></div>
+                                    <div>Total Milk Collected</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Display Milk Delivered -->
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card bg-warning text-white">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="text-value"><a href="#" class="btn btn-transparent">{{ milk_delivered }}</a></div>
+                                    <div>Milk Delivered</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<aside class="aside-menu">
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#timeline" role="tab"><i class="icon-list"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#settings" role="tab"><i class="icon-settings"></i></a>
+        </li>
+    </ul>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<html>
-    <h5>
-        paste your dahsboard code here
-    </h5>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane active" id="timeline" role="tabpanel">
+            <!-- Timeline content -->
+        </div>
+        <div class="tab-pane p-3" id="settings" role="tabpanel">
+            <h6>Settings</h6>
+            <hr>
+            <!-- System Utilization content -->
+        </div>
+    </div>
+</aside>
 
 
 
